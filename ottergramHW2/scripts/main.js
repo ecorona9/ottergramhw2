@@ -9,9 +9,6 @@ var ESC_KEY = 27;
 
 test = 27;
 
-
-//var slider_img = document.querySelector('.slider-img');
-
 var imageCount = getThumbnailsArray().length;
 var i = 0;
 
@@ -28,19 +25,16 @@ function setDetails(imageUrl, titleText) {
 
 function imageFromThumb(thumb) {
     'use strict';
-    //console.log(thumb);
     return thumb.getAttribute('data-image-url');
 }
 
 function indexFromThumb(thumb) {
     'use strict';
-    //console.log(thumb);
     return thumb.getAttribute('index');
 }
 
 function titleFromThumb(thumb) {
     'use strict';
-    //console.log(thumb.getAttribute('data-image-title'));
     return thumb.getAttribute('data-image-title');
 }
 
@@ -63,7 +57,6 @@ function addThumbClickHandler(thumb) {
 function addNextHandler() {
     'use strict';
     var thumbArr = getThumbnailsArray();
-    console.log("thumbArr: " + thumbArr[i]);
     var thumb = thumbArr[i];
     setDetailsFromThumb(thumb);
     showDetails();
